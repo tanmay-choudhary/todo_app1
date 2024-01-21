@@ -20,7 +20,7 @@ export default function Home() {
         setVisibilityFilter={(filter) => dispatch(setVisibilityFilter(filter))}
       />
 
-      <div className="mr-40 ml-40 border border-red-800">
+      <div className="mr-40 ml-40 ">
         {todos.map((todo) => {
           if (
             visibilityFilter === "ALL_TASKS" ||
