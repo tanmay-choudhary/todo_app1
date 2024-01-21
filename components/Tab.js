@@ -11,9 +11,9 @@ function Tab() {
   };
 
   return (
-    <div className="ml-40 mr-40 justify-between flex flex-col-3">
+    <div className="my-7 container mx-auto lg:w-[60%] justify-between flex flex-col-3">
       <button
-        className={`mr-10 rounded-lg h-10 w-40 ${
+        className={`lg:mr-10 mr-5 rounded-lg h-10 w-40 ${
           activeFilter === "ALL_TASKS" ? "bg-blue-400" : "bg-blue-100"
         }`}
         onClick={() => handleButtonClick("ALL_TASKS")}
@@ -21,7 +21,7 @@ function Tab() {
         All tasks
       </button>
       <button
-        className={`mr-10 rounded-lg h-10 w-40 ${
+        className={`lg:mr-10 mr-5 rounded-lg h-10 w-40 ${
           activeFilter === "ACTIVE" ? "bg-blue-400" : "bg-blue-100"
         }`}
         onClick={() => handleButtonClick("ACTIVE")}
@@ -29,7 +29,7 @@ function Tab() {
         Active
       </button>
       <button
-        className={`mr-10 rounded-lg h-10 w-40 ${
+        className={` rounded-lg h-10 w-40 ${
           activeFilter === "COMPLETED" ? "bg-blue-400" : "bg-blue-100"
         }`}
         onClick={() => handleButtonClick("COMPLETED")}
