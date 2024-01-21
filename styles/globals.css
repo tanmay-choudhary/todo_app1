@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f1f1f1be;
+}
+
+@keyframes shimmer-fast {
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer-fast {
+  animation: shimmer-fast 0.8s infinite linear;
+}
+
+.skeleton-logo,
+.skeleton-button,
+.skeleton-text {
+  height: 16px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer-fast 0.8s infinite linear;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.skeleton-button {
+  width: 70px;
+}
+
+.skeleton-logo {
+  width: 70px;
+}
+
+
+.input-wrapper {
+  width: auto;
+  height: 3.2rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0 15px;
+  border: 1px solid #d4c5c5;
+  /* //box-shadow: 0px 0px 8px #ddd; */
+  background-color: white;
+  display: flex;
+  flex: 0.7;
+  align-items: center;
+  outline: none;
+
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 16px;
+  width: 100%;
+  margin-left: 5px;
+  outline: none;
+
+}
+
+
+input:hover {
+  outline: none;
+}
+
+#search-icon {
+  color: royalblue;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip::after {
+  content: attr(title);
+  background: black;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  white-space: nowrap;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.triangle-border {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  /* You can adjust the size of the triangle here */
+  border-bottom: 50px solid transparent;
+  /* You can adjust the size of the triangle here */
+  border-left: 50px solid red;
+  /* Change 'your-triangle-color' to the desired color */
+}
+
+.react-flow .react-flow__handle {
+  width: 30px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: #784be8;
+}
+
+.react-flow .react-flow__handle-top {
+  top: -10px;
+}
+
+.react-flow .react-flow__handle-bottom {
+  bottom: -10px;
+}
+
+.react-flow .react-flow__node {
+  height: 40px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-width: 2px;
+  font-weight: 700;
+}
+
+.react-flow .react-flow__edge path,
+.react-flow__connectionline path {
+  stroke-width: 2;
+}
+
+.wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
